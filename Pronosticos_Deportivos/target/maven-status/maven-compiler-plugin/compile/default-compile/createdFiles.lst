@@ -1,0 +1,11 @@
+controlador\PartidoController.class
+modelo\Ronda.class
+controlador\ApuestaController.class
+modelo\PrincipalPI.class
+modelo\Equipo.class
+modelo\Pronostico.class
+modelo\LectorDeArchivos.class
+modelo\ResultadoEnum.class
+modelo\Apostador.class
+inicio\Main.class
+modelo\Partido.class
