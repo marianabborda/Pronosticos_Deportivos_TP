@@ -7,7 +7,6 @@ import controlador.ApuestaController;
 public class Apostador {
 
 	private String nombre;
-	//private String apellido;
 	private List<Pronostico> pronostico;
 	 private ApuestaController apuestaController;
 	
@@ -27,14 +26,7 @@ public class Apostador {
 		this.nombre = nombre;
 	}
 
-	//public String getApellido() {
-	//	return apellido;
-	//}
-
-	//public void setApellido(String apellido) {
-	//	this.apellido = apellido;
-	//}
-	
+		
 	public List<Pronostico> getPronostico(){
 		return this.pronostico;
 	}
