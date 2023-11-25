@@ -3,17 +3,31 @@ import controlador.PartidoController;
 
 
 public class Pronostico {
-	private PartidoController partidoController;	
+	private String nombreApostador; 
+	private String nroRonda;
     private String idPartido;
     private ResultadoEnum resultadoEnum;
+    private PartidoController partidoController;
+    private int puntaje; 
 
-    public Pronostico(String idPartido, ResultadoEnum resultadoEnum, PartidoController partidoController) {
+    public Pronostico(String nombreApostador, String nroRonda, String idPartido, ResultadoEnum resultadoEnum, PartidoController partidoController) {
+    	this.nombreApostador = nombreApostador;
+    	this.nroRonda = nroRonda;
     	this.idPartido = idPartido;
         this.resultadoEnum = resultadoEnum;
         this.partidoController = partidoController;   
     }
 
+    
+    public String  getNroRonda() {
+        return nroRonda;
+    }
+    
   
+    public String  getNombreApostador() {
+        return nombreApostador;
+    }
+    
     public String  getIdPartido() {
         return idPartido;
     }
@@ -23,7 +37,13 @@ public class Pronostico {
     	return resultadoEnum;
     }
     
-    
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
+
+    public int getPuntaje() {
+        return puntaje;
+    }
     
     
     

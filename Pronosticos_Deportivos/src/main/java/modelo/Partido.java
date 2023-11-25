@@ -3,6 +3,7 @@ package modelo;
 import controlador.PartidoController;
 
 public class Partido {
+	private String nroRonda; 
 	private String idPartido;
     private Equipo equipo1;
     private Equipo equipo2;
@@ -10,8 +11,9 @@ public class Partido {
     private int golesEquipo2;
 
 
-   public Partido(String idPartido,Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2) {
-        this.idPartido = idPartido;
+   public Partido(String nroRonda,String idPartido,Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2) {
+        this.nroRonda = nroRonda;
+	   this.idPartido = idPartido;
     	this.equipo1 = equipo1;
         this.equipo2 = equipo2;
        this.golesEquipo1 = golesEquipo1;
@@ -21,6 +23,9 @@ public class Partido {
 
     
     
+   public String getNroRonda() {
+       return nroRonda;
+   }
     public String getIdPartido() {
         return idPartido;
     }
