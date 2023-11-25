@@ -2,9 +2,8 @@ package controlador;
 
 
 import modelo.Partido;
+
 import modelo.ResultadoEnum;
-
-
 
 public class PartidoController {
 	
@@ -14,8 +13,7 @@ public class PartidoController {
         this.partido = partido;
     }
     
-    
-    
+        
     public ResultadoEnum resultado(String idPartido) {
         // Lógica para determinar el resultado (ganadorEquipo1, ganadorEquipo2, empate)
         // Utiliza el idPartido para obtener el partido correspondiente 

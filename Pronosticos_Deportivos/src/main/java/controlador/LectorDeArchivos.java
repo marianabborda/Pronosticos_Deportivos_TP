@@ -63,17 +63,5 @@ public class LectorDeArchivos {
        
 
 
-	   //para imprimir por consola los datos de las rondas y los pronósticos 
-	  // public void imprimirDatos(List<String[]> datos) {
-	   //     for (String[] fila : datos) {
-	   //         for (String elemento : fila) {
-	  //              System.out.print(elemento + " ");
-	  //          }
-	  //          System.out.println(); 
-	   //     }
-	  //  }
-	//}
-
-
 
 

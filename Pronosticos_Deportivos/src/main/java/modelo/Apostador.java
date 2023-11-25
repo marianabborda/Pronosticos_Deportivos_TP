@@ -13,7 +13,6 @@ public class Apostador {
 	
 	public Apostador(String nombre, String apellido, List<Pronostico> pronostico, ApuestaController apuestaController){
 		this.nombre = nombre;
-        //this.apellido = apellido;
         this.pronostico = pronostico;
         this.apuestaController = apuestaController;
 	}
