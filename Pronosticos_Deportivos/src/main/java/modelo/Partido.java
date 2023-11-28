@@ -23,7 +23,13 @@ public class Partido {
 
     
     
-   public String getNroRonda() {
+   public Partido(String string, int i, int j, String string2) {
+	// TODO Auto-generated constructor stub
+}
+
+
+
+public String getNroRonda() {
        return nroRonda;
    }
     public String getIdPartido() {

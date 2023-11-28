@@ -11,13 +11,22 @@ public class Ronda {
         this.partidos = partidos;
     }
 
-    public String getNroRonda() {
+    public Ronda() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNroRonda() {
         return nroRonda;
     }
 
     public List<Partido> getPartidos() {
         return partidos;
     }
+
+	public void agregarPartido(Partido partido1) {
+		// TODO Auto-generated method stub
+		
+	}
 
     
 }
