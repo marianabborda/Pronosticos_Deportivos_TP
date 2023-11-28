@@ -2,7 +2,7 @@ package inicio;
 
 import controlador.PrincipalPI;
 import controlador.ApuestaController;
-import controlador.ResultadosTotales;
+//import controlador.ResultadosTotales;
 import controlador.PuntajeApostadoresController;
 import controlador.ListaPartidosController;
 import controlador.ListaPronosticosController;
@@ -12,10 +12,14 @@ import modelo.Pronostico;
 import modelo.Ronda;
 
 
+
 import java.util.List;
+
+import javax.swing.SwingUtilities;
+
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {			
 		
 		        PrincipalPI conector = new PrincipalPI();
 
@@ -37,9 +41,17 @@ public class Main {
 		        PuntajeApostadoresController.calcularPuntajesApostadoresEnTodasLasRondas(listaApuestas, listaRondas, apuestaController);
 
 		        // Imprimir los resultados por pantalla
-		        ResultadosTotales.imprimirResultadosTotales(listaApuestas);
+		       // ResultadosTotales.imprimirResultadosTotales(listaApuestas);
+		        
+		        // Crear la ventana de resultados y mostrarla
+		        SwingUtilities.invokeLater(() -> {
+		            VentanaPrincipal ventanaPrincipal = new VentanaPrincipal(listaApuestas);
+		            ventanaPrincipal.setVisible(true);
+		        });
 		    }
+		}
+		  
 	
-}
+
 	
 	

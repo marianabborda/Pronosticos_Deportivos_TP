@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 
 public class ResultadosTotales {
-	public static void imprimirResultadosTotales(List<Pronostico> listaApuestas) {
+	public static String obtenerResultadosTotales(List<Pronostico> listaApuestas) {
         Map<String, Integer> puntajesTotales = new HashMap<>();
         Map<String, Integer> aciertosTotales = new HashMap<>();
 
@@ -31,15 +31,78 @@ public class ResultadosTotales {
         // Ordenar la lista en orden descendente por puntajeTotal
         resultList.sort(Collections.reverseOrder(Comparator.comparing(Map.Entry::getValue)));
 
-        // Imprimir los resultados totales ordenados por puntajeTotal
+        // Construir una cadena con los resultados totales ordenados por puntajeTotal
+        StringBuilder resultados = new StringBuilder();
         for (Map.Entry<String, Integer> entry : resultList) {
             String nombreApostador = entry.getKey();
             int puntajeTotal = entry.getValue();
             int aciertos = aciertosTotales.getOrDefault(nombreApostador, 0);
 
-            System.out.println("Apostador: " + nombreApostador + ", Puntaje Total: " + puntajeTotal
-                    + ", Aciertos Totales: " + aciertos);
+            resultados.append("Apostador: ").append(nombreApostador)
+                    .append(", Puntaje Total: ").append(puntajeTotal)
+                    .append(", Aciertos Totales: ").append(aciertos)
+                    .append("\n");
         }
+
+        return resultados.toString();
     }
 }
+	
+	
+	
+	
 
+	/*public static void imprimirResultadosTotales(List<Pronostico> listaApuestas) {
+        Map<String, Integer> puntajesTotales = new HashMap<>();
+        Map<String, Integer> aciertosTotales = new HashMap<>();
+
+        for (Pronostico pronostico : listaApuestas) {
+            String nombreApostador = pronostico.getNombreApostador();
+            int puntajeTotal = pronostico.getPuntajeTotal();
+
+            puntajesTotales.put(nombreApostador, puntajesTotales.getOrDefault(nombreApostador, 0) + puntajeTotal);
+
+            if (puntajeTotal > 0) {
+                aciertosTotales.put(nombreApostador, aciertosTotales.getOrDefault(nombreApostador, 0) + 1);
+            }
+        }
+               
+
+        // Crear una lista de Map.Entry para ordenar los resultados
+        List<Map.Entry<String, Integer>> resultList = new ArrayList<>(puntajesTotales.entrySet());
+
+        // Ordenar la lista en orden descendente por puntajeTotal
+        resultList.sort(Collections.reverseOrder(Comparator.comparing(Map.Entry::getValue)));
+
+     // Construir una cadena con los resultados totales ordenados por puntajeTotal
+        StringBuilder resultados = new StringBuilder();
+        for (Map.Entry<String, Integer> entry : resultList) {
+            String nombreApostador = entry.getKey();
+            int puntajeTotal = entry.getValue();
+            int aciertos = aciertosTotales.getOrDefault(nombreApostador, 0);
+
+            resultados.append("Apostador: ").append(nombreApostador)
+                    .append(", Puntaje Total: ").append(puntajeTotal)
+                    .append(", Aciertos Totales: ").append(aciertos)
+                    .append("\n");
+        }
+
+        return resultados.toString();
+    }
+}
+        
+        
+        
+        
+        //Imprimir los resultados totales ordenados por puntajeTotal
+      //  for (Map.Entry<String, Integer> entry : resultList) {
+        //    String nombreApostador = entry.getKey();
+         //   int puntajeTotal = entry.getValue();
+         //   int aciertos = aciertosTotales.getOrDefault(nombreApostador, 0);
+
+         //   System.out.println("Apostador: " + nombreApostador + ", Puntaje Total: " + puntajeTotal
+          //          + ", Aciertos Totales: " + aciertos);
+        
+   // }
+//}
+*/

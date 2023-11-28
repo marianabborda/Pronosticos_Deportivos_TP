@@ -19,6 +19,7 @@
          <configuration>
             <archive>
                <manifest>
+				 <addClasspath>true</addClasspath>
                  <mainClass>inicio.Main</mainClass>
                </manifest>
             </archive>
